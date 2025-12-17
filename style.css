@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* GLOBAL RESET */
 body {
   margin: 0;
@@ -30,7 +34,7 @@ a:hover {
 /* HERO SECTION (MAIN BLUE AREA) */
 .hero {
   min-height: 100vh;
-  padding: 80px 10%;
+  padding: 100px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,30 +44,45 @@ a:hover {
 
 /* HERO LEFT */
 .hero-left {
-  width: 60%;
+  max-width: 620px;
 }
 
 .hero-left h1 {
   font-size: 64px;
-  line-height: 1.1;
-  margin-bottom: 10px;
+  line-height: 1.05;
+  margin: 0 0 20px 0;
 }
 
 .hero-left h2 {
-  font-size: 24px;
-  font-weight: normal;
-  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 25px;
 }
 
 .hero-left p {
-  max-width: 720px;
-  font-size: 1.1em;
-  color: #f2f4ff;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e8ecff;
+  margin-bottom: 18px;
 }
 
 /* HERO RIGHT */
 .hero-right {
-  width: 35%;
+  width: 260px;
+}
+
+.hero-right a {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.hero-right a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 /* HERO LINKS */
@@ -126,4 +145,24 @@ footer,
   font-size: 14px;
   background-color: #222;
   color: #ccc;
+}
+
+.founder-message {
+  max-width: 760px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.founder-message p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #222;
+}
+
+.founder-message blockquote {
+  font-style: italic;
+  background: #f7f9ff;
+  border-left: 4px solid #0b3c91;
+  padding: 25px;
+  margin: 40px 0;
 }
