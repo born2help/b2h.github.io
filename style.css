@@ -95,13 +95,13 @@ footer {
 }
 
 .hero {
-  background: #0b3c91;
-  color: white;
-  min-height: 100vh;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 80px 10%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b3c91, #06245f);
+  color: white;
 }
 
 .hero h1 {
@@ -156,17 +156,6 @@ blockquote {
   max-width: 700px;
 }
 
-.page-header {
-  background: #0b3c91;
-  padding: 80px 20px;
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 .content {
   max-width: 800px;
   margin: auto;
@@ -196,4 +185,22 @@ blockquote {
   text-align: center;
   padding: 40px;
   font-size: 14px;
+}
+
+.hero-left {
+  width: 60%;
+}
+
+.hero-right {
+  width: 35%;
+}
+
+.hero-left h1 {
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.hero-left h2 {
+  font-size: 24px;
+  margin-top: 10px;
 }
