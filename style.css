@@ -155,3 +155,41 @@ blockquote {
   margin: 40px auto;
   max-width: 700px;
 }
+
+.page-header {
+  background: #0b3c91;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.founder-message p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+blockquote {
+  font-style: italic;
+  background: #f7f9ff;
+  border-left: 4px solid #0b3c91;
+  padding: 25px;
+  margin: 40px 0;
+}
+
+.signature {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+}
