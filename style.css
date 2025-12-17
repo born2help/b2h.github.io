@@ -158,8 +158,12 @@ blockquote {
 
 .page-header {
   background: #0b3c91;
-  color: white;
   padding: 80px 20px;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
