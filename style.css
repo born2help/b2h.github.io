@@ -1,3 +1,4 @@
+/* GLOBAL RESET */
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -6,6 +7,7 @@ body {
   background-color: #f4f6f8;
 }
 
+/* HEADINGS */
 h1, h2, h3 {
   font-weight: 600;
 }
@@ -15,6 +17,7 @@ h2 {
   color: #0b3c91;
 }
 
+/* LINKS */
 a {
   color: #0b3c91;
   text-decoration: none;
@@ -24,6 +27,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* HERO SECTION (MAIN BLUE AREA) */
 .hero {
   min-height: 100vh;
   padding: 80px 10%;
@@ -34,6 +38,7 @@ a:hover {
   color: white;
 }
 
+/* HERO LEFT */
 .hero-left {
   width: 60%;
 }
@@ -56,10 +61,12 @@ a:hover {
   color: #f2f4ff;
 }
 
+/* HERO RIGHT */
 .hero-right {
   width: 35%;
 }
 
+/* HERO LINKS */
 .hero-links a {
   margin: 10px 0;
   display: block;
@@ -68,6 +75,7 @@ a:hover {
   border-bottom: 2px solid rgba(255,255,255,0.4);
 }
 
+/* CONTENT SECTIONS */
 .section,
 .content {
   max-width: 800px;
@@ -82,12 +90,15 @@ a:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.08);
 }
 
+/* FOUNDER MESSAGE */
 .founder-message p {
   font-size: 18px;
   line-height: 1.8;
   margin-bottom: 25px;
 }
 
+/* BLOCKQUOTE (USED IN CONSTITUTION & MESSAGE) */
+blockquote {
   font-style: italic;
   background: #f7f9ff;
   border-left: 4px solid #0b3c91;
@@ -96,14 +107,21 @@ a:hover {
   max-width: 700px;
 }
 
+/* SIGNATURE */
 .signature {
   margin-top: 40px;
   font-weight: bold;
 }
 
+/* FOOTER */
 footer,
 .page-footer {
   text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  background-color: #222;
+  color: #ccc;
+}
   padding: 30px 20px;
   font-size: 14px;
   background-color: #222;
