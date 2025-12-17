@@ -53,3 +53,32 @@ footer {
   background: #222;
   color: #ccc;
 }
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5f8ff;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-weight: normal;
+  color: #555;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 15px auto;
+  font-size: 1.1em;
+}
+
+.hero-links a {
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
