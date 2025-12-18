@@ -5,27 +5,9 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.7;
+  background: #f4f6f8;
   color: #222;
-  background-color: #f4f6f8;
-}
-
-h1, h2, h3 {
-  font-weight: 600;
-}
-
-h2 {
-  margin-top: 40px;
-  color: #0b3c91;
-}
-
-a {
-  color: #0b3c91;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  line-height: 1.7;
 }
 
 .hero {
@@ -39,13 +21,13 @@ a:hover {
 }
 
 .hero-left {
-  max-width: 620px;
+  max-width: 600px;
 }
 
 .hero-left h1 {
   font-size: 64px;
   line-height: 1.05;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .hero-left h2 {
@@ -79,12 +61,13 @@ a:hover {
   text-decoration: underline;
 }
 
-.hero-links a {
-  margin: 10px 0;
-  display: block;
-  font-weight: bold;
-  color: #ffffff;
-  border-bottom: 2px solid rgba(255,255,255,0.4);
+a {
+  color: #0b3c91;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .section,
@@ -101,38 +84,17 @@ a:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.08);
 }
 
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 25px;
-}
-
-blockquote {
-  font-style: italic;
-  background: #f7f9ff;
-  border-left: 4px solid #0b3c91;
-  padding: 25px;
-  margin: 40px auto;
-  max-width: 700px;
-}
-
 .signature {
   margin-top: 40px;
   font-weight: bold;
 }
 
-footer,
-.page-footer {
+footer {
   text-align: center;
-  padding: 30px 20px;
+  padding: 30px;
+  background: #f2f4f8;
   font-size: 14px;
-  background-color: #222;
-  color: #ccc;
-}
-  padding: 30px 20px;
-  font-size: 14px;
-  background-color: #222;
-  color: #ccc;
+  color: #444;
 }
 
 .founder-message {
@@ -141,10 +103,17 @@ footer,
   padding: 0 20px;
 }
 
+.founder-message h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0b3c91;
+}
+
 .founder-message p {
   font-size: 18px;
   line-height: 1.85;
   color: #222;
+  margin-bottom: 25px;
 }
 
 .founder-message blockquote {
