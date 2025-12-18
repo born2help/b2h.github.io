@@ -152,3 +152,12 @@ footer {
   );
   pointer-events: none;
 }
+
+.hero-right a {
+  font-weight: 500;
+}
+
+.hero-right a::before {
+  content: "› ";
+  opacity: 0.6;
+}
