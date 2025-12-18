@@ -18,6 +18,8 @@ body {
   align-items: center;
   background: linear-gradient(135deg, #0b3c91, #06245f);
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-left {
