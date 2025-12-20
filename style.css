@@ -31,8 +31,7 @@ a:hover {
   align-items: center;
   background: linear-gradient(135deg, #0a2c70, #031a45);
   color: white;
-
-  position: relative; /* REQUIRED */
+  position: relative;
   overflow: hidden;
 }
 
