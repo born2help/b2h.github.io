@@ -171,3 +171,44 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* =========================
+   FLOATING SHAPES (SAFE)
+   ========================= */
+
+.floating-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Only two shapes – subtle */
+.shape1 {
+  width: 90px;
+  height: 90px;
+  top: 18%;
+  left: 22%;
+  animation: floatSlow 28s linear infinite;
+}
+
+.shape2 {
+  width: 140px;
+  height: 140px;
+  bottom: 20%;
+  right: 18%;
+  animation: floatSlow 36s linear infinite;
+}
+
+@keyframes floatSlow {
+  0%   { transform: translateY(0) translateX(0); }
+  50%  { transform: translateY(-35px) translateX(20px); }
+  100% { transform: translateY(0) translateX(0); }
+}
