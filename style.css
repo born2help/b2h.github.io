@@ -256,3 +256,18 @@ filter: blur(2px);
   50%  { transform: translateY(-35px) translateX(20px); }
   100% { transform: translateY(0) translateX(0); }
 }
+
+/* Animated gradient for hero heading */
+.hero-left h1 {
+  background: linear-gradient(270deg, #ff7f50, #1e90ff, #32cd32, #ff7f50);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
