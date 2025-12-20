@@ -19,53 +19,75 @@ a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   HERO SECTION – CLEAN CORE
-   ========================= */
-
+/* HERO SECTION */
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   padding: 120px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background: linear-gradient(135deg, #0a2c70, #031a45);
   color: white;
-
-  position: relative;
-  overflow: hidden;
 }
 
-/* Soft premium background glow (SAFE) */
-.hero::before {
-  content: "";
+/* Overlay */
+.hero-overlay {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top right,
-    rgba(255,255,255,0.08),
-    transparent 60%
-  );
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* LEFT CONTENT */
+/* Floating shapes */
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-shapes .shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  animation: floatShape 30s linear infinite;
+}
+
+/* Individual shapes */
+.shape1 { width: 80px; height: 80px; top: 10%; left: 20%; animation-duration: 30s; }
+.shape2 { width: 50px; height: 50px; top: 50%; left: 10%; animation-duration: 35s; }
+.shape3 { width: 100px; height: 100px; top: 30%; left: 70%; animation-duration: 40s; }
+
+@keyframes floatShape {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); }
+  50% { transform: translateY(-30px) translateX(20px) rotate(180deg); }
+  100% { transform: translateY(0) translateX(0) rotate(360deg); }
+}
+
+/* Hero left content */
 .hero-left {
-  max-width: 620px;
+  max-width: 600px;
   position: relative;
   z-index: 1;
 }
 
-/* Hero heading gradient + glow */
 .hero-left h1 {
-  font-size: 70px; /* keep your previous size */
+  font-size: 70px;
   line-height: 1.05;
   margin-bottom: 20px;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.25); /* existing shadow */
-  
-  /* NEW: gradient & glow effect */
+  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+
+  /* Gradient + glow */
   background: linear-gradient(90deg, #FFD700, #FF8C00, #FF4500);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,10 +97,8 @@ a:hover {
 .hero-left h1::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: radial-gradient(circle, rgba(255, 215, 0, 0.2), transparent 60%);
   z-index: -1;
 }
@@ -88,26 +108,22 @@ a:hover {
   font-weight: 400;
   margin-bottom: 25px;
   color: #dfe3ff;
-  line-height: 1.5;
 }
 
 .hero-left p {
   font-size: 18px;
-  line-height: 1.8;
   color: #e0e4ff;
   margin-bottom: 20px;
+  line-height: 1.8;
 }
 
-/* RIGHT LINKS */
+/* Hero right buttons */
 .hero-right {
   display: flex;
   flex-direction: column;
   gap: 15px;
   position: relative;
   z-index: 1;
-
-  border-left: 1px solid rgba(255,255,255,0.15);
-  padding-left: 24px;
 }
 
 .hero-right a {
@@ -117,9 +133,8 @@ a:hover {
   color: white;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .hero-right a:hover {
