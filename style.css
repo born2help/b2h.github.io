@@ -198,3 +198,30 @@ footer a:hover {
   position: relative !important;
   z-index: 2 !important;
 }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255,255,255,0.08),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+🎯 Result:
+Hero looks richer
+No layout damage
+Professional finish
+✅ STEP 3 — TEXT POLISH (SAFE)
+Copy code
+Css
+.hero-left h1 {
+  text-shadow: 0 6px 30px rgba(0,0,0,0.35);
+}
+
+.hero-left h2 {
+  opacity: 0.9;
+}
