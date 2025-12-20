@@ -184,3 +184,17 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.hero {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hero-left,
+.hero-right {
+  position: relative !important;
+  z-index: 2 !important;
+}
