@@ -87,6 +87,35 @@ a:hover {
   text-decoration: underline;
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  animation: float 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% { transform: rotate(0deg) translate(0,0); }
+  50% { transform: rotate(180deg) translate(50px, 50px); }
+  100% { transform: rotate(360deg) translate(0,0); }
+}
+
+/* Ensure text is above overlay */
+.hero-left, .hero-right {
+  position: relative;
+  z-index: 1;
+}
+
 .section,
 .content {
   max-width: 800px;
