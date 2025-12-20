@@ -44,41 +44,31 @@ a:hover {
   z-index: 0;
 }
 
-/* Floating shapes */
+/* Floating shapes behind hero text */
 .floating-shapes {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  pointer-events: none; /* shapes are non-interactive */
   overflow: hidden;
-  z-index: 0;
+  z-index: 0; /* behind text */
 }
 
 .floating-shapes .shape {
   position: absolute;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   animation: floatShape 30s linear infinite;
 }
 
-/* Individual shapes */
+/* Different sizes, positions, and animation durations for natural effect */
 .shape1 { width: 80px; height: 80px; top: 10%; left: 20%; animation-duration: 30s; }
 .shape2 { width: 50px; height: 50px; top: 50%; left: 10%; animation-duration: 35s; }
 .shape3 { width: 100px; height: 100px; top: 30%; left: 70%; animation-duration: 40s; }
-
-/* Additional floating shapes */
 .shape4 { width: 60px; height: 60px; top: 70%; left: 50%; animation-duration: 28s; }
 .shape5 { width: 90px; height: 90px; top: 20%; left: 80%; animation-duration: 32s; }
-.shape6 { width: 40px; height: 40px; top: 35%; left: 30%; animation-duration: 36s; }
-.shape7 { width: 70px; height: 70px; top: 15%; left: 60%; animation-duration: 34s; }
-
-/* Optional: Different opacity for natural layering */
-.shape4 { background: rgba(255,255,255,0.06); }
-.shape5 { background: rgba(255,255,255,0.07); }
-.shape6 { background: rgba(255,255,255,0.05); }
-.shape7 { background: rgba(255,255,255,0.08); }
 
 @keyframes floatShape {
   0% { transform: translateY(0) translateX(0) rotate(0deg); }
