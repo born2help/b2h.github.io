@@ -260,3 +260,60 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Add to style.css */
+.hero {
+  min-height: 100vh;
+  padding: 120px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0a2c70, #031a45);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left h1 {
+  font-size: 70px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.hero-left h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: #dfe3ff;
+  line-height: 1.5;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #e0e4ff;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-right a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #0629a7;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-right a:hover {
+  background: #0b3c91;
+  transform: translateY(-2px);
+}
