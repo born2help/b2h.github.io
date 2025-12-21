@@ -264,3 +264,108 @@ filter: blur(2px);
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #081c4a, #020b25);
+  color: white;
+  overflow: hidden;
+}
+
+/* overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
+  animation: overlayMove 18s linear infinite;
+  z-index: 0;
+}
+
+/* floating shapes */
+.floating-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  animation: floatShape 25s ease-in-out infinite;
+}
+
+/* individual shapes */
+.shape1 { width: 120px; height: 120px; top: 15%; left: 20%; }
+.shape2 { width: 60px; height: 60px; top: 55%; left: 10%; animation-duration: 30s; }
+.shape3 { width: 140px; height: 140px; top: 30%; left: 70%; animation-duration: 35s; }
+.shape4 { width: 80px; height: 80px; top: 75%; left: 55%; animation-duration: 28s; }
+.shape5 { width: 100px; height: 100px; top: 20%; left: 85%; animation-duration: 32s; }
+
+/* animations */
+@keyframes floatShape {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-35px) translateX(25px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes overlayMove {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* text layers */
+.hero-left,
+.hero-right {
+  position: relative;
+  z-index: 2;
+}
+
+/* hero text */
+.hero-left h1 {
+  font-size: 68px;
+  background: linear-gradient(90deg, #ffd700, #ff7b00, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.hero-left h2 {
+  font-size: 24px;
+  color: #e0e6ff;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  max-width: 520px;
+  line-height: 1.8;
+  color: #d9deff;
+}
+
+/* hero links */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-right a {
+  padding: 12px 22px;
+  background: #0b3c91;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-right a:hover {
+  background: #1155cc;
+  transform: translateY(-2px);
+}
