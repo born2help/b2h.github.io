@@ -19,7 +19,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* HERO BASE */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -27,127 +26,77 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #0a2c70, #031a45);
+  background: linear-gradient(135deg, #050b1f, #081c4a);
   color: white;
   overflow: hidden;
 }
 
-/* Overlay */
+/* subtle animated glow */
 .hero-overlay {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-  animation: float 20s linear infinite;
-  pointer-events: none;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  animation: glowMove 20s ease-in-out infinite;
   z-index: 0;
-}
-
-/* Floating shapes */
-.floating-shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
 }
 
-.floating-shapes .shape {
-  position: absolute;
-  background: rgba(255,255,255,0.25);
-  border-radius: 50%;
-  animation: floatShape 25s linear infinite;
+@keyframes glowMove {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(80px, 60px); }
+  100% { transform: translate(0, 0); }
 }
 
-/* Shape sizes & positions */
-.shape1 { width: 80px; height: 80px; top: 10%; left: 20%; animation-duration: 30s; }
-.shape2 { width: 50px; height: 50px; top: 50%; left: 10%; animation-duration: 35s; }
-.shape3 { width: 100px; height: 100px; top: 30%; left: 70%; animation-duration: 40s; }
-.shape4 { width: 60px; height: 60px; top: 70%; left: 50%; animation-duration: 28s; }
-.shape5 { width: 90px; height: 90px; top: 20%; left: 80%; animation-duration: 32s; }
-
-/* Animate shapes */
-@keyframes floatShape {
-  0% { transform: translateY(0) translateX(0) rotate(0deg); }
-  50% { transform: translateY(-30px) translateX(20px) rotate(180deg); }
-  100% { transform: translateY(0) translateX(0) rotate(360deg); }
-}
-
-/* Text above overlay & shapes */
-.hero-left, .hero-right {
+/* content above glow */
+.hero-left,
+.hero-right {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Hero text gradient + glow */
+/* text styling */
 .hero-left h1 {
-  font-size: 70px;
-  line-height: 1.05;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #ffd700, #ff6a00, #ff00ff, #00d4ff);
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffd700, #ff9f1c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px rgba(255,255,255,0.3), 0 4px 20px rgba(0,0,0,0.3);
-  animation: gradientMove 8s ease infinite;
-  background-size: 400% 100%;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 .hero-left h2 {
-  font-size: 24px;
-  color: #dfe3ff;
-  text-shadow: 0 0 6px rgba(255,255,255,0.3);
+  font-size: 26px;
+  color: #dbe2ff;
   margin-bottom: 25px;
 }
 
 .hero-left p {
-  font-size: 18px;
-  color: #e0e4ff;
+  max-width: 520px;
   line-height: 1.8;
-  margin-bottom: 20px;
+  color: #cfd6ff;
 }
 
-/* Hero right links */
+/* navigation buttons */
 .hero-right {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
 .hero-right a {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #0629a7;
+  padding: 12px 22px;
+  background: rgba(255,255,255,0.08);
   color: white;
   border-radius: 8px;
-  font-size: 16px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .hero-right a:hover {
-  background: #0b3c91;
+  background: rgba(255,255,255,0.18);
   transform: translateY(-2px);
-}
-
-/* Overlay floating animation */
-@keyframes float {
-  0% { transform: rotate(0deg) translate(0,0); }
-  50% { transform: rotate(180deg) translate(50px, 50px); }
-  100% { transform: rotate(360deg) translate(0,0); }
-}
-
-/* =========================
+  
+}/* =========================
    CONTENT SECTIONS
 ========================= */
 
@@ -208,48 +157,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   FLOATING SHAPES (SAFE)
-   ========================= */
-
-.floating-shapes {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.floating-shapes .shape {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-filter: blur(2px);
-}
-
-/* Only two shapes – subtle */
-.shape1 {
-  width: 120px;
-  height: 120px;
-  top: 18%;
-  left: 22%;
-  animation: floatSlow 28s linear infinite;
-}
-
-.shape2 {
-  width: 120px;
-  height: 120px;
-  bottom: 20%;
-  right: 18%;
-  animation: floatSlow 36s linear infinite;
-}
-
-@keyframes floatSlow {
-  0%   { transform: translateY(0) translateX(0); }
-  50%  { transform: translateY(-35px) translateX(20px); }
-  100% { transform: translateY(0) translateX(0); }
-}
-
 /* Animated gradient for hero heading */
 .hero-left h1 {
   background: linear-gradient(270deg, #ff7f50, #1e90ff, #32cd32, #ff7f50);
@@ -265,107 +172,3 @@ filter: blur(2px);
   100% { background-position: 0% 50%; }
 }
 
-.hero {
-  position: relative;
-  min-height: 100vh;
-  padding: 120px 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(135deg, #081c4a, #020b25);
-  color: white;
-  overflow: hidden;
-}
-
-/* overlay */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
-  animation: overlayMove 18s linear infinite;
-  z-index: 0;
-}
-
-/* floating shapes */
-.floating-shapes {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  animation: floatShape 25s ease-in-out infinite;
-}
-
-/* individual shapes */
-.shape1 { width: 120px; height: 120px; top: 15%; left: 20%; }
-.shape2 { width: 60px; height: 60px; top: 55%; left: 10%; animation-duration: 30s; }
-.shape3 { width: 140px; height: 140px; top: 30%; left: 70%; animation-duration: 35s; }
-.shape4 { width: 80px; height: 80px; top: 75%; left: 55%; animation-duration: 28s; }
-.shape5 { width: 100px; height: 100px; top: 20%; left: 85%; animation-duration: 32s; }
-
-/* animations */
-@keyframes floatShape {
-  0% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-35px) translateX(25px); }
-  100% { transform: translateY(0) translateX(0); }
-}
-
-@keyframes overlayMove {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-/* text layers */
-.hero-left,
-.hero-right {
-  position: relative;
-  z-index: 2;
-}
-
-/* hero text */
-.hero-left h1 {
-  font-size: 68px;
-  background: linear-gradient(90deg, #ffd700, #ff7b00, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
-}
-
-.hero-left h2 {
-  font-size: 24px;
-  color: #e0e6ff;
-  margin-bottom: 20px;
-}
-
-.hero-left p {
-  max-width: 520px;
-  line-height: 1.8;
-  color: #d9deff;
-}
-
-/* hero links */
-.hero-right {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.hero-right a {
-  padding: 12px 22px;
-  background: #0b3c91;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.hero-right a:hover {
-  background: #1155cc;
-  transform: translateY(-2px);
-}
