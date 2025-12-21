@@ -59,7 +59,7 @@ a:hover {
 
 .floating-shapes .shape {
   position: absolute;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.25);
   border-radius: 50%;
   animation: floatShape 25s linear infinite;
 }
