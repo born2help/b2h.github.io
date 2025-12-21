@@ -172,3 +172,20 @@ footer a:hover {
   100% { background-position: 0% 50%; }
 }
 
+/* ================= MISSION QUOTE ================= */
+
+.mission-quote {
+  background: #f6f8ff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.mission-quote p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #0b3c91;
+  font-style: italic;
+}
