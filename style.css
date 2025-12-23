@@ -255,3 +255,41 @@ footer a:hover {
   50% { transform: translateY(-20px) translateX(25px) rotate(180deg); }
   100% { transform: translateY(0) translateX(0) rotate(360deg); }
 }
+
+/* ================= FOUNDER QUOTE SECTION ================= */
+
+.founder-quote-section {
+  background: #f5f7fa;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.founder-quote-box {
+  max-width: 900px;
+  background: #ffffff;
+  padding: 50px 45px;
+  border-left: 6px solid #1e4fd8;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+.founder-quote {
+  font-size: 22px;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.founder-sign {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555;
+  text-align: right;
+}
+
+.founder-sign span {
+  font-weight: 400;
+  color: #1e4fd8;
+}
