@@ -222,6 +222,10 @@ footer a:hover {
   text-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
+.founder-message p::before {
+  content: "💡 "; /* Or ✨, 🛡, 📜 etc. */
+}
+
 .founder-name {
   font-size: 15px;
   letter-spacing: 2px;
