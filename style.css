@@ -228,3 +228,19 @@ footer a:hover {
   text-transform: uppercase;
   color: #cfd6ff;
 }
+
+/* Founder Protection Highlight */
+.section h3 {
+  position: relative;
+}
+
+.section h3::before {
+  content: "§";
+  color: #0b3c91;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.section.light {
+  border-left: 4px solid #0b3c91;
+}
