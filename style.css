@@ -35,8 +35,11 @@ a:hover {
 /* ================= HERO → FOUNDER DIVIDER ================= */
 .hero-divider {
   width: 100%;
-  height: 60px;
-  background: linear-gradient(to bottom, rgba(5,11,31,1), rgba(5,11,31,0));
+  height: 80px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 80"><path fill="%23050b1f" fill-opacity="1" d="M0,0 C480,80 960,0 1440,80 L1440,80 L0,80
+  Z"></path></svg>') no-repeat bottom;
+  background-size: cover;
 }
 
 .hero-overlay {
