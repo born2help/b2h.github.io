@@ -147,12 +147,12 @@ a:hover {
 }
 
 /* ================= FOUNDER QUOTES / MISSION MESSAGE ================= */
-.founder-message {
+.hero + .founder-message {  /* select only the founder message right after hero */
   max-width: 900px;
   margin: 50px auto 60px;
   padding: 40px 30px;
-  background: linear-gradient(135deg, #0b3c91, #06245f); /* dark blue gradient */
-  color: #ffffff; /* white text for readability */
+  background: linear-gradient(135deg, #0b3c91, #06245f); /* dark gradient */
+  color: #ffffff; /* white text */
   font-size: 22px;
   line-height: 1.8;
   font-weight: 300;
@@ -162,20 +162,20 @@ a:hover {
   position: relative;
 }
 
-.founder-message p {
+.hero + .founder-message p {
   margin-bottom: 20px;
 }
 
-.founder-message p::before {
-  content: "💡 "; /* optional symbol */
+.hero + .founder-message p::before {
+  content: "💡 "; 
   margin-right: 6px;
 }
 
-.founder-name {
+.hero + .founder-message .founder-name {
   font-size: 16px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #ffd700; /* golden color for founder name */
+  color: #ffd700; /* gold color */
   margin-top: 15px;
   display: block;
 }
