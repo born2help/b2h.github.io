@@ -268,3 +268,52 @@ footer {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80"><path fill="%23ffffff" d="M0,40 C240,0 480,80 720,40 960,0 1200,80 1440,40 L1440,0 L0,0 Z"/></svg>') no-repeat center;
   background-size: cover;
 }
+
+/* ================= HERO FLOATING ELEMENTS ================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* base shape */
+.hero-float {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(106,168,255,0.25), transparent 70%);
+  filter: blur(6px);
+  animation: floatMove 14s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* individual tuning */
+.float-1 {
+  width: 260px;
+  height: 260px;
+  top: 10%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.float-2 {
+  width: 360px;
+  height: 360px;
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.float-3 {
+  width: 180px;
+  height: 180px;
+  top: 55%;
+  left: 60%;
+  animation-delay: 6s;
+}
+
+/* animation */
+@keyframes floatMove {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-30px); }
+  100% { transform: translateY(0px); }
+}
