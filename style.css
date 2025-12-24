@@ -32,29 +32,18 @@ a:hover {
   overflow: hidden;
 }
 
-/* ================= HERO → FOUNDER DIVIDER ================= */
-.hero-divider {
-  width: 100%;
-  height: 80px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1440 80"><path fill="%23050b1f" fill-opacity="1" d="M0,0 C480,80 960,0 1440,80 L1440,80 L0,80
-  Z"></path></svg>') no-repeat bottom;
-  background-size: cover;
-}
-
 .hero-overlay {
   position: absolute;
   inset: -40%;
   background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
   animation: glowMove 20s ease-in-out infinite;
   z-index: 0;
-  pointer-events: none;
 }
 
 @keyframes glowMove {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(80px, 60px); }
-  100% { transform: translate(0, 0); }
+  0% { transform: translate(0,0); }
+  50% { transform: translate(80px,60px); }
+  100% { transform: translate(0,0); }
 }
 
 .hero-left,
@@ -67,7 +56,7 @@ a:hover {
   font-size: 72px;
   font-weight: 700;
   margin-bottom: 10px;
-  background: linear-gradient(270deg, #ff7f50, #1e90ff, #32cd32, #ff7f50);
+  background: linear-gradient(270deg,#ff7f50,#1e90ff,#32cd32,#ff7f50);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -88,7 +77,6 @@ a:hover {
 
 .hero-left p {
   max-width: 520px;
-  line-height: 1.8;
   color: #cfd6ff;
 }
 
@@ -103,7 +91,6 @@ a:hover {
   background: rgba(255,255,255,0.08);
   color: white;
   border-radius: 8px;
-  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -112,82 +99,23 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* ================= CONTENT SECTIONS ================= */
-.section,
-.content {
-  max-width: 800px;
-  margin: 70px auto;
-  padding: 0 20px;
+/* ================= DIVIDER ================= */
+.hero-divider {
+  width: 100%;
+  height: 80px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80"><path fill="%23050b1f" d="M0,0 C480,80 960,0 1440,80 L1440,80 L0,80 Z"/></svg>') no-repeat bottom;
+  background-size: cover;
 }
 
-.section h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #0b3c91;
-  position: relative;
-}
-
-.section h3::before {
-  content: "§";
-  color: #0b3c91;
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-.section p,
-.section ul {
-  font-size: 17px;
-  line-height: 1.9;
-  margin-bottom: 18px;
-}
-
-.section ul {
-  padding-left: 20px;
-}
-
-.section ul li {
-  margin-bottom: 10px;
-}
-
-/* Light sections */
-.section.light {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 18px rgba(0,0,0,0.08);
-  border-left: 4px solid #0b3c91;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 35px 20px;
-  background: #f2f4f8;
-  font-size: 14px;
-  color: #444;
-}
-
-footer a {
-  color: #0b3c91;
-  margin: 0 6px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ================= FLOATING HERO SHAPES ================= */
-
+/* ================= FLOATING SHAPES ================= */
 .floating-shape {
   position: absolute;
   border-radius: 50%;
   opacity: 0.12;
-  z-index: 1;               /* BELOW text, ABOVE background */
-  pointer-events: none;
+  z-index: 1;
   filter: blur(2px);
 }
 
-/* Shape One */
 .shape1 {
   width: 140px;
   height: 140px;
@@ -197,7 +125,6 @@ footer a:hover {
   animation: floatSlow 22s ease-in-out infinite;
 }
 
-/* Shape Two */
 .shape2 {
   width: 90px;
   height: 90px;
@@ -207,7 +134,6 @@ footer a:hover {
   animation: floatMedium 28s ease-in-out infinite;
 }
 
-/* Shape Three */
 .shape3 {
   width: 180px;
   height: 180px;
@@ -217,27 +143,44 @@ footer a:hover {
   animation: floatFast 24s ease-in-out infinite;
 }
 
-/* Animations */
 @keyframes floatSlow {
-  0%   { transform: translateY(0) translateX(0); }
-  50%  { transform: translateY(-35px) translateX(20px); }
-  100% { transform: translateY(0) translateX(0); }
+  50% { transform: translate(-20px,-35px); }
 }
 
 @keyframes floatMedium {
-  0%   { transform: translateY(0) translateX(0); }
-  50%  { transform: translateY(25px) translateX(-20px); }
-  100% { transform: translateY(0) translateX(0); }
+  50% { transform: translate(20px,25px); }
 }
 
 @keyframes floatFast {
-  0%   { transform: translateY(0) translateX(0); }
-  50%  { transform: translateY(-20px) translateX(30px); }
-  100% { transform: translateY(0) translateX(0); }
+  50% { transform: translate(-30px,-20px); }
 }
 
-/* ================= FOUNDER QUOTE SECTION ================= */
+/* ================= CONTENT ================= */
+.section {
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
 
+.section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0b3c91;
+}
+
+.section h3::before {
+  content: "§ ";
+}
+
+.section.light {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  border-left: 4px solid #0b3c91;
+  box-shadow: 0 0 18px rgba(0,0,0,0.08);
+}
+
+/* ================= FOUNDER QUOTE ================= */
 .founder-quote-section {
   background: #f5f7fa;
   padding: 80px 20px;
@@ -247,29 +190,32 @@ footer a:hover {
 
 .founder-quote-box {
   max-width: 900px;
-  background: #ffffff;
+  background: white;
   padding: 50px 45px;
   border-left: 6px solid #1e4fd8;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.06);
 }
 
 .founder-quote {
   font-size: 22px;
-  line-height: 1.8;
-  color: #222;
   margin-bottom: 30px;
-  font-weight: 300;
 }
 
 .founder-sign {
+  text-align: right;
   font-size: 15px;
-  letter-spacing: 1px;
   text-transform: uppercase;
   color: #555;
-  text-align: right;
 }
 
 .founder-sign span {
-  font-weight: 400;
   color: #1e4fd8;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  background: #f2f4f8;
+  font-size: 14px;
 }
