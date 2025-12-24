@@ -126,35 +126,32 @@ a:hover {
 }
 
 /* ================= FOUNDER QUOTE ================= */
-.founder-quote-section {
-  background: #f5f7fa;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.founder-quote-box {
-  max-width: 900px;
-  background: white;
-  padding: 50px 45px;
-  border-left: 6px solid #1e4fd8;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.06);
-}
 
 .founder-quote {
+  background: linear-gradient(180deg, #0b1020, #0f1a3a);
+}
+
+.quote-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid #6aa8ff;
+  backdrop-filter: blur(8px);
+}
+
+.quote-box p {
   font-size: 22px;
-  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #e9ecff;
 }
 
-.founder-sign {
-  text-align: right;
-  font-size: 15px;
+.founder-name {
+  margin-top: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: #555;
-}
-
-.founder-sign span {
-  color: #1e4fd8;
+  color: #9aa3ff;
 }
 
 /* ================= FOOTER ================= */
