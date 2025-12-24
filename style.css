@@ -135,7 +135,7 @@ section {
 }
 
 .section h3::before {
-  content: "§ ";
+  content: "🍀 ";
   opacity: 0.6;
 }
 
