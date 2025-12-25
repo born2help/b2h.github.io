@@ -20,25 +20,6 @@ html {
   --white: #ffffff;
 }
 
-<script>
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-
-document.querySelectorAll(
-  '.section, .transparency-section, .governance-section'
-).forEach(section => {
-  observer.observe(section);
-});
-</script>
-
 /* ================= BASE ================= */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
