@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+/* ================= SMOOTH SCROLL ================= */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ================= ROOT ================= */
 :root {
   --blue-dark: #0b1020;
