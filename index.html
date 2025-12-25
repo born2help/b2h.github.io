@@ -7,6 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+  <script>
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+document.querySelectorAll(
+  '.section, .transparency-section, .governance-section'
+).forEach(section => {
+  observer.observe(section);
+});
+</script>
+  
 <body>
 
 <!-- ================= HERO ================= -->
