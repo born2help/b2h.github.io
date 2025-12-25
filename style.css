@@ -537,3 +537,62 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================= STEP 7 — VISUAL POLISH ================= */
+
+/* Hero Micro-motion */
+.hero-left h1,
+.hero-left h2,
+.hero-left p {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hero-left h1:hover,
+.hero-left h2:hover,
+.hero-left p:hover {
+  transform: translateY(-5px);
+  opacity: 0.95;
+}
+
+/* Hero Floating Glows */
+.hero-float {
+  transition: filter 0.6s ease, opacity 0.6s ease;
+}
+
+.hero-float:hover {
+  filter: blur(12px);
+  opacity: 0.3;
+}
+
+/* Card Hover Glow for Transparency, Governance, Participation */
+.transparency-card:hover,
+.governance-node:hover,
+.participation-card:hover,
+.mission-card:hover,
+.promise-card:hover,
+.founder-quote .quote-box:hover {
+  box-shadow: 0 18px 40px rgba(106,168,255,0.35);
+  transform: translateY(-6px);
+  transition: all 0.35s ease;
+}
+
+/* Smooth section reveal on scroll */
+.section, .transparency-section, .governance-section, .participation-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible,
+.transparency-section.visible,
+.governance-section.visible,
+.participation-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Small glow on founder quote highlight */
+.founder-quote .quote-box p::selection {
+  background: rgba(106,168,255,0.3);
+  color: #ffffff;
+}
