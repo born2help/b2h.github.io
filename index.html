@@ -33,10 +33,10 @@
   </div>
 
   <div class="hero-right">
-    <a href="#constitution">📜 Constitution</a>
-    <a href="#governance">🏛 Governance</a>
-    <a href="#tokenomics">⚖️ Tokenomics Philosophy</a>
-    <a href="#founder">🛡 Founder Safeguards</a>
+    <a href="#constitution" class="scroll-link">📜 Constitution</a>
+    <a href="#governance" class="scroll-link">🏛 Governance</a>
+    <a href="#tokenomics" class="scroll-link">⚖️ Tokenomics Philosophy</a>
+    <a href="#founder" class="scroll-link">🛡 Founder Safeguards</a>
   </div>
 </section>
 
@@ -59,9 +59,9 @@
 <div class="section-divider light"></div>
 
 <!-- ================= MISSION & PROMISE ================= -->
-<section class="mission-wrapper" id="constitution">
+<section class="mission-wrapper">
 
-  <div class="mission-card">
+  <div class="mission-card" id="constitution">
     <h3>Our Mission</h3>
     <p>
       B2H was not created as a trend, a business, or a promise of quick wealth.
@@ -89,7 +89,7 @@
     </p>
   </div>
 
-  <div class="promise-card">
+  <div class="promise-card" id="tokenomics">
     <h3>Our Promise</h3>
     <ul>
       <li>No interest (Riba)</li>
@@ -104,7 +104,7 @@
 <div class="section-divider light"></div>
 
 <!-- ================= STEP 4 — TRANSPARENCY FRAMEWORK ================= -->
-<section class="transparency-section" id="tokenomics">
+<section class="transparency-section" id="transparency">
 
   <div class="transparency-container">
 
@@ -178,7 +178,7 @@
 
     <div class="governance-flow">
 
-      <div class="governance-node founder">
+      <div class="governance-node founder" id="founder">
         <h4>Founder (Guardian Role)</h4>
         <p>
           The Founder holds no ownership or financial privilege.
@@ -219,18 +219,30 @@
 
 </section>
 
-<!-- ================= STEP 7 — MICRO GLOW EFFECT IS CSS ONLY ================= -->
-
 <!-- ================= FOOTER ================= -->
 <footer>
   <p>
     <a href="#constitution">📜 Constitution</a> |
     <a href="#governance">🏛 Governance</a> |
-    <a href="#tokenomics">🔍 Transparency</a> |
+    <a href="#tokenomics">⚖️ Tokenomics Philosophy</a> |
     <a href="#founder">🛡 Founder Safeguards</a>
   </p>
   <p>© 2025 B2H — Burn to Help</p>
 </footer>
+
+<script>
+document.querySelectorAll('.scroll-link').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      target.classList.add('scroll-highlight');
+      setTimeout(() => target.classList.remove('scroll-highlight'), 1600);
+    }
+  });
+});
+</script>
 
 </body>
 </html>
