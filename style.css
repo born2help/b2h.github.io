@@ -282,3 +282,35 @@ footer { text-align:center; padding:45px 20px; background:#0a0f1f; font-size:14p
   opacity: 1;
   transform: scale(1.05);
 }
+
+/* ================= INTERNAL PAGE BOXES ================= */
+.section {
+  background: rgba(255,255,255,0.05);
+  border-left: 5px solid var(--blue-soft);
+  padding: 40px 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  margin-bottom: 40px;
+}
+
+.section h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ffffff; /* Headings more prominent */
+}
+
+.section p, .section ul, .section li {
+  color: #d6dbff; /* Text inside boxes readable */
+}
+
+/* ================= SCROLL HIGHLIGHT ================= */
+.scroll-highlight {
+  animation: highlightGlow 1.5s ease-in-out;
+}
+
+@keyframes highlightGlow {
+  0% { box-shadow: 0 0 0px rgba(255, 255, 0, 0); }
+  50% { box-shadow: 0 0 25px rgba(255, 255, 0, 0.8); }
+  100% { box-shadow: 0 0 0px rgba(255, 255, 0, 0); }
+}
