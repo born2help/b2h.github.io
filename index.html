@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,36 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-  <script>
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-
-document.querySelectorAll(
-  '.section, .transparency-section, .governance-section'
-).forEach(section => {
-  observer.observe(section);
-});
-</script>
-  
 <body>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
+ 
+  <!-- Floating Shapes -->
   <div class="floating-shape shape1"></div>
   <div class="floating-shape shape2"></div>
   <div class="floating-shape shape3"></div>
 
-  <div class="hero-float float-1"></div>
-  <div class="hero-float float-2"></div>
-  <div class="hero-float float-3"></div>
+  <!-- Floating Hero Elements -->
+<div class="hero-float float-1"></div>
+<div class="hero-float float-2"></div>
+<div class="hero-float float-3"></div>
 
   <div class="hero-left">
     <h1>Born for Humanity</h1>
@@ -49,172 +33,101 @@ document.querySelectorAll(
   </div>
 
   <div class="hero-right">
-    <a href="#constitution" class="scroll-link">📜 Constitution</a>
-    <a href="#governance" class="scroll-link">🏛 Governance</a>
-    <a href="#tokenomics" class="scroll-link">⚖️ Tokenomics Philosophy</a>
-    <a href="#founder" class="scroll-link">🛡 Founder Safeguards</a>
+    <a href="constitution.html">📜 Constitution</a>
+    <a href="governance.html">🏛 Governance</a>
+    <a href="tokenomics.html">⚖️ Tokenomics Philosophy</a>
+    <a href="participation-safety.html#founder">🛡 Founder Safeguards</a>
   </div>
 </section>
 
+<!-- ================= DIVIDER ================= -->
 <div class="hero-divider"></div>
 
-<!-- ================= CONSTITUTION ================= -->
-<section id="constitution" class="section">
-  <h3>Constitution</h3>
-  <p>
-    B2H is founded on ethics, compassion, and accountability.
-    Every decision exists only to reduce suffering and protect dignity.
-  </p>
-  <p>
-    No authority, structure, or token mechanism can override this foundation.
-  </p>
-</section>
+<!-- ================= FOUNDER QUOTES ================= -->
+<section class="section founder-quote">
+  <div class="quote-box">
+    <p>“We were not created to accumulate endlessly, but to protect dignity,
+    relieve suffering, and leave behind goodness that Allah accepts.”</p>
 
-<!-- ================= TOKENOMICS PHILOSOPHY ================= -->
-<section id="tokenomics" class="section">
-  <h3>Tokenomics Philosophy</h3>
-  <p>
-    B2H tokens are not ownership instruments.
-    They represent participation, responsibility, and trust.
-  </p>
-  <ul>
-    <li>No interest (Riba)</li>
-    <li>No speculation-driven extraction</li>
-    <li>No founder enrichment</li>
-    <li>All value cycles back to humanitarian purpose</li>
-  </ul>
-</section>
+    <p>“This mission was not created for wealth, power, or recognition. It was
+    created because silence in the face of suffering is also a form of injustice.”</p>
 
-<!-- ================= MISSION & PROMISE ================= -->
-<section class="mission-wrapper">
-  <div class="mission-card">
-    <h3>Our Mission</h3>
-    <p>
-      B2H exists to transform participation into relief,
-      value into dignity, and growth into real human impact.
-    </p>
-    <p>
-      This mission is lifelong and irreversible.
-    </p>
-  </div>
-
-  <div class="promise-card">
-    <h3>Our Promise</h3>
-    <ul>
-      <li>No exploitation</li>
-      <li>No personal gain</li>
-      <li>No mission drift</li>
-      <li>Human dignity always first</li>
-    </ul>
+    <p class="founder-name">— Founder, B2H (Burn to Help)</p>
   </div>
 </section>
 
-<!-- ================= TRANSPARENCY ================= -->
-<section class="transparency-section" id="transparency">
-  <div class="transparency-container">
-    <div class="transparency-header">
-      <h2>Transparency & Use of Funds</h2>
-      <p>Every contribution is a trust — never ownership.</p>
-    </div>
+<div class="section-divider light"></div>
 
-    <div class="transparency-grid">
-      <div class="transparency-card">
-        <h4>Trust Allocation</h4>
-        <p>Funds are used only for humanitarian relief and sustainability.</p>
-      </div>
-
-      <div class="transparency-card">
-        <h4>No Interest</h4>
-        <p>All financial movement is interest-free and ethical.</p>
-      </div>
-
-      <div class="transparency-card">
-        <h4>Public Accountability</h4>
-        <p>Disclosures ensure clarity and trust.</p>
-      </div>
-
-      <div class="transparency-card">
-        <h4>Protection Lock</h4>
-        <p>No individual can redirect value for personal gain.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GOVERNANCE ================= -->
-<section class="governance-section" id="governance">
-  <div class="governance-container">
-    <div class="governance-header">
-      <h2>Governance Structure</h2>
-      <p>Authority exists only to protect purpose.</p>
-    </div>
-
-    <div class="governance-flow">
-      <div class="governance-node founder">
-        <h4>Founder (Guardian)</h4>
-        <p>
-          Holds no ownership or financial privilege.
-          Can only block misuse and enforce safeguards.
-        </p>
-      </div>
-
-      <div class="governance-arrow">↓</div>
-
-      <div class="governance-node council">
-        <h4>Ethical Council (Future)</h4>
-        <p>
-          Rotating oversight body. No permanent power.
-        </p>
-      </div>
-
-      <div class="governance-arrow">↓</div>
-
-      <div class="governance-node safeguards">
-        <h4>System Safeguards</h4>
-        <p>
-          Locks, audits, transparency, and mission-freeze controls.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOUNDER SAFEGUARDS ================= -->
-<section id="founder" class="section">
-  <h3>Founder Safeguards</h3>
+<!-- ================= CONTENT ================= -->
+<section class="section">
+  <h3>Our Mission</h3>
   <p>
-    The Founder cannot profit, extract value, or override ethics.
-    Authority exists only to defend the mission.
+    B2H was not created as a trend, a business, or a promise of quick wealth.
+    It was created from a responsibility — toward people who suffer quietly,
+    and toward Allah, who sees every intention.
   </p>
   <p>
-    Any deviation triggers automatic resistance and public visibility.
+    Around the world, millions of families struggle in silence.
+    They endure with dignity while hoping that someone, somewhere, still cares.
+  </p>
+  <p>
+    B2H exists to become that someone —
+    to transform participation into relief,
+    value into dignity,
+    and growth into real human impact.
+  </p>
+  <p>
+    This mission is not temporary.
+    It is a lifelong commitment to reduce suffering,
+    protect human dignity,
+    and ensure that helping others remains at the heart of everything we do.
   </p>
 </section>
+
+<div class="section-divider"></div>
+
+<section class="section light">
+  <h3>Our Promise</h3>
+  <p>No interest. No exploitation. No personal gain. Every contribution exists for humanity only.</p>
+</section>
+
+<section class="section">
+  <h3>About the Founder</h3>
+  <p>
+    This project was not created for recognition or wealth.
+    It was created because silent suffering exists everywhere,
+    and someone must choose to respond.
+  </p>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section light">
+  <h3>Mission Lock</h3>
+  <p>
+    B2H exists solely to reduce human suffering.
+    This mission cannot be changed by profit, power, or pressure.
+  </p>
+</section>
+
+<section class="section">
+  <h3>Transparency & Use of Funds</h3>
+  <p>
+    Every contribution is treated with responsibility,
+    dignity, and accountability.
+  </p>
+</section>
+
+<div class="section-divider light"></div>
 
 <!-- ================= FOOTER ================= -->
 <footer>
   <p>
-    <a href="#constitution">📜 Constitution</a> |
-    <a href="#governance">🏛 Governance</a> |
-    <a href="#tokenomics">⚖️ Tokenomics</a> |
-    <a href="#founder">🛡 Founder Safeguards</a>
+    <a href="constitution.html">📜 Constitution</a> |
+    <a href="governance.html">🏛 Governance</a>
   </p>
   <p>© 2025 B2H — Burn to Help</p>
 </footer>
-
-<script>
-document.querySelectorAll('.scroll-link').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-      target.classList.add('scroll-highlight');
-      setTimeout(() => target.classList.remove('scroll-highlight'), 1500);
-    }
-  });
-});
-</script>
 
 </body>
 </html>
