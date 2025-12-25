@@ -248,3 +248,32 @@ footer { text-align:center; padding:45px 20px; background:#0a0f1f; font-size:14p
 
 /* ================= STEP 7 — VISUAL POLISH ================= */
 .section, .transparency-section, .governance-section { will-change: transform, opacity; }
+
+/* ================= STEP 7b — MICRO GLOW EFFECT ================= */
+.transparency-card, .governance-node, .mission-card, .promise-card {
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.transparency-card::after, 
+.governance-node::after, 
+.mission-card::after, 
+.promise-card::after {
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  background: rgba(106,168,255,0.12);
+  border-radius: 16px;
+  filter: blur(12px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.transparency-card:hover::after,
+.governance-node:hover::after,
+.mission-card:hover::after,
+.promise-card:hover::after {
+  opacity: 1;
+  transform: scale(1.05);
+}
