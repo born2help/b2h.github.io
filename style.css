@@ -364,3 +364,100 @@ footer {
   .hero-right { align-items: center; }
   .hero-right a { width: 100%; max-width: 360px; }
 }
+
+/* ================= STEP 5 — GOVERNANCE SNAPSHOT ================= */
+
+.governance-section {
+  background: linear-gradient(180deg, #0b1020, #0f1633);
+  padding: 110px 20px;
+  color: #eaeaf0;
+}
+
+.governance-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.governance-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 80px;
+}
+
+.governance-header h2 {
+  font-size: 34px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.governance-header p {
+  font-size: 18px;
+  color: #cfd3ff;
+}
+
+/* Flow Layout */
+.governance-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Nodes */
+.governance-node {
+  max-width: 700px;
+  padding: 36px 34px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.06);
+  border-left: 5px solid #6aa8ff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.governance-node h4 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.governance-node p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #d6dbff;
+}
+
+/* Role-specific accents */
+.governance-node.founder {
+  border-left-color: #ffd700;
+}
+
+.governance-node.council {
+  border-left-color: #6aa8ff;
+}
+
+.governance-node.safeguards {
+  border-left-color: #32cd32;
+}
+
+/* Arrows */
+.governance-arrow {
+  font-size: 28px;
+  color: #9aa3ff;
+  opacity: 0.8;
+}
+
+/* Footer line */
+.governance-footer {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 15px;
+  color: #9aa3ff;
+  letter-spacing: 0.4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .governance-node {
+    padding: 30px 26px;
+  }
+}
