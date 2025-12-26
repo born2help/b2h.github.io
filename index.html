@@ -2,250 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>B2H — Burn to Help</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2H — Burn to Help</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Basic modern styling, can be merged into style.css */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    header {
+      background: #1d1f22;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      background: linear-gradient(120deg, #ff6f61, #ffb347);
+      color: #fff;
+    }
+    .hero-left {
+      flex: 1 1 500px;
+    }
+    .hero-left h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-left h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-left p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .hero-right {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .hero-right img {
+      max-width: 80%;
+      border-radius: 1rem;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ff6f61;
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      flex: 1 1 250px;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    footer {
+      background: #1d1f22;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #ffb347;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    @media(max-width: 768px){
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-right {
+        margin-top: 2rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- ================= HERO ================= -->
+<header>
+  <div class="logo">
+    <h2>B2H</h2>
+  </div>
+  <nav>
+    <a href="vision.html">Vision</a>
+    <a href="founder.html">Founder</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="transparency.html">Transparency</a>
+    <a href="partners.html">Partners</a>
+  </nav>
+</header>
+
 <section class="hero">
- 
-  <!-- Floating Shapes -->
-  <div class="floating-shape shape1"></div>
-  <div class="floating-shape shape2"></div>
-  <div class="floating-shape shape3"></div>
-
-  <!-- Floating Hero Elements -->
-  <div class="hero-float float-1"></div>
-  <div class="hero-float float-2"></div>
-  <div class="hero-float float-3"></div>
-
   <div class="hero-left">
-    <h1>Born for Humanity</h1>
-    <h2>Burn to Help — B2H</h2>
+    <h1>Burn to Help (B2H)</h1>
+    <h2>A movement where responsibility comes before wealth</h2>
     <p>
-      A mission built on responsibility, ethics, and compassion.
-      Growth is meaningful only when it reduces human suffering
-      and protects dignity.
+      B2H is not just a token — it is a global humanitarian engine.
+      Built to outlive its founder, it protects purpose, empowers people,
+      and ensures that help reaches those who need it most.
     </p>
   </div>
-
   <div class="hero-right">
-  <a href="constitution.html">📜 Constitution</a>
-  <a href="governance.html">🏛 Governance</a>
-  <a href="tokenomics.html">⚖️ Tokenomics Philosophy</a>
-  <a href="participation-safety.html#founder">🛡 Founder Safeguards</a>
-</div>
-</section>
-
-<!-- ================= HERO → FOUNDER DIVIDER ================= -->
-<div class="hero-divider"></div>
-
-<!-- ================= FOUNDER QUOTES ================= -->
-<section class="section founder-quote">
-  <div class="quote-box">
-    <p>“We were not created to accumulate endlessly, but to protect dignity,
-    relieve suffering, and leave behind goodness that Allah accepts.”</p>
-
-    <p>“This mission was not created for wealth, power, or recognition. It was
-    created because silence in the face of suffering is also a form of injustice.”</p>
-
-    <p class="founder-name">— Founder, B2H (Burn to Help)</p>
+    <img src="images/hero-globe.png" alt="B2H Global Impact">
   </div>
 </section>
 
-<div class="section-divider light"></div>
-
-<!-- ================= MISSION & PROMISE ================= -->
-<section class="mission-wrapper">
-
-  <div class="mission-card">
-    <h3>Our Mission</h3>
-    <p>
-      B2H was not created as a trend, a business, or a promise of quick wealth.
-      It was created from responsibility — toward people who suffer quietly,
-      and toward Allah, who sees every intention.
-    </p>
-
-     <p>
-    B2H exists to become that someone —
-    to transform participation into relief,
-    value into dignity,
-    and growth into real human impact.
-  </p>
-
-    <p>
-    This mission is not temporary.
-    It is a lifelong commitment to reduce suffering,
-    protect human dignity,
-    and ensure that helping others remains at the heart of everything we do.
-  </p>
-    
-    <p>
-      Around the world, millions endure with dignity while hoping that someone,
-      somewhere, still cares. B2H exists to become that someone.
-    </p>
+<section>
+  <h3>Why B2H Exists</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>🌍 Global Humanitarian Impact</h4>
+      <p>2% of every transaction goes directly to verified global aid programs with full transparency.</p>
+    </div>
+    <div class="card">
+      <h4>🛡 Trust & Security</h4>
+      <p>Permanent liquidity locks, anti-whale mechanisms, and zero pre-mint manipulation protect all participants.</p>
+    </div>
+    <div class="card">
+      <h4>🔥 Deflationary Engine</h4>
+      <p>1% of every transaction is burned forever — increasing token rarity and value over time.</p>
+    </div>
+    <div class="card">
+      <h4>💡 Community Governance</h4>
+      <p>Holders vote on charity events, partnerships, and treasury use — building trust that lasts decades.</p>
+    </div>
   </div>
-
-  <div class="promise-card">
-    <h3>Our Promise</h3>
-    <ul>
-      <li>No interest (Riba)</li>
-      <li>No exploitation</li>
-      <li>No personal enrichment</li>
-      <li>Every contribution serves humanity only</li>
-    </ul>
-  </div>
-
 </section>
 
-  <section class="section">
-  <h3>Are We Really Making History?</h3>
-  <p>
-    Not by launching a token.
-    Not by numbers on a screen.
-    Not by promises of wealth.
-  </p>
-  <p>
-    History is made when dignity is protected,
-    when hunger is reduced,
-    when someone survives because help arrived in time.
-  </p>
-  <p>
-    If B2H ever fails to serve the poor,
-    then no technology, structure, or growth will matter.
-  </p>
-</section>
-
-<div class="section-divider light"></div>
-
-<!-- ================= STEP 4 — TRANSPARENCY FRAMEWORK ================= -->
-<section class="transparency-section">
-
-  <div class="transparency-container">
-
-    <div class="transparency-header">
-      <h2>Transparency & Use of Funds</h2>
-      <p>
-        Every contribution to B2H is a trust — not ownership.
-        Funds exist only to relieve suffering and protect dignity.
-      </p>
-    </div>
-
-    <div class="transparency-grid">
-
-      <div class="transparency-card">
-        <h4>Trust-Based Allocation</h4>
-        <p>
-          Contributions are allocated strictly for humanitarian relief,
-          operational sustainability, and mission continuity.
-          No personal enrichment is permitted.
-        </p>
-      </div>
-
-      <div class="transparency-card">
-        <h4>Zero Interest Policy</h4>
-        <p>
-          No funds are lent, grown, or circulated through interest (Riba).
-          All financial movement follows ethical and faith-aligned principles.
-        </p>
-      </div>
-
-      <div class="transparency-card">
-        <h4>Public Accountability</h4>
-        <p>
-          Periodic summaries, reports, and disclosures will be published
-          to ensure clarity, visibility, and public confidence.
-        </p>
-      </div>
-
-      <div class="transparency-card">
-        <h4>Founder Protection Lock</h4>
-        <p>
-          The Founder holds no financial privilege.
-          Authority exists only to safeguard purpose and prevent misuse.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="transparency-footer">
-      This framework cannot be altered for profit, power, or pressure.
-    </div>
-
+<section>
+  <h3>Quick Links</h3>
+  <div class="cards">
+    <div class="card"><a href="founder.html">Message from Founder</a></div>
+    <div class="card"><a href="tokenomics.html">Tokenomics & Mechanism</a></div>
+    <div class="card"><a href="roadmap.html">50-Year Roadmap</a></div>
+    <div class="card"><a href="transparency.html">Transparency Framework</a></div>
+    <div class="card"><a href="partners.html">Partners & Charities</a></div>
   </div>
-
-</section>
-
-  <!-- ================= STEP 5 — GOVERNANCE SNAPSHOT ================= -->
-
-<div class="section-divider"></div>
-
-<section class="governance-section">
-
-  <div class="governance-container">
-
-    <div class="governance-header">
-      <h2>Governance & Safeguards</h2>
-      <p>
-        Authority within B2H exists to protect the mission — not to control people,
-        funds, or outcomes.
-      </p>
-    </div>
-
-    <div class="governance-flow">
-
-      <div class="governance-node founder">
-        <h4>Founder (Guardian Role)</h4>
-        <p>
-          The Founder holds no ownership or financial privilege.
-          Authority is limited to safeguarding values, preventing deviation,
-          and activating protections when misuse appears.
-        </p>
-      </div>
-
-      <div class="governance-arrow">↓</div>
-
-      <div class="governance-node council">
-        <h4>Ethical Council (Future)</h4>
-        <p>
-          A rotating body of trusted individuals responsible for oversight,
-          ethical alignment, and long-term accountability.
-          No permanent power is allowed.
-        </p>
-      </div>
-
-      <div class="governance-arrow">↓</div>
-
-      <div class="governance-node safeguards">
-        <h4>Structural Safeguards</h4>
-        <p>
-          Transparency rules, financial locks, audit pathways,
-          and mission-freeze mechanisms prevent capture, misuse,
-          or silent deviation.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="governance-footer">
-      No single individual can override purpose, transparency, or safeguards.
-    </div>
-
-  </div>
-
 </section>
 
 <footer>
-  <p>
-    <a href="constitution.html">📜 Constitution</a> |
-    <a href="governance.html">🏛 Governance</a> |
-    <a href="tokenomics.html">⚖️ Tokenomics Philosophy</a> |
-    <a href="participation-safety.html#founder">🛡 Founder Safeguards</a>
-  </p>
   <p>© 2025 B2H — Burn to Help</p>
+  <p>
+    <a href="ethics.html">Ethics</a> | 
+    <a href="disclaimer.html">Disclaimer</a> | 
+    <a href="burn.html">Burn Mechanism</a>
+  </p>
 </footer>
 
 </body>
